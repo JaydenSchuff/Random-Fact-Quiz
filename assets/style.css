@@ -1,0 +1,80 @@
+*, *::before, *::after {
+   box-sizing: border-box;
+   font-family: Verdana, Tahoma, sans-serif;
+}
+
+:root{
+   --bgColor:powderblue;
+   --txtColor:black;
+   --borderBg: white;
+   --borderColor: black;
+   --wrong: red;
+   --right: rgb(19, 143, 19);
+   --altColor:white;
+}
+
+body{
+   background-color: var(--bgColor);
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 80vw;
+   height: 80vh;
+  
+}
+
+h1{
+   color:var(--txtColor);
+   border: 5px solid var(--borderColor) ;
+   background-color: var(--borderBg);
+   margin: 5px;
+   padding: 10px;
+   text-align: center;
+   font-size: 40px;
+}
+
+.correct{
+   background-color: var(--right);
+}
+
+.wrong{
+   background-color: var(--wrong);
+}
+
+.container{
+   width: 1000px;
+   max-width: 80%;
+   background-color: var(--borderBg);
+   border-radius: 5px;
+   padding: 10px;
+   box-shadow: 0 0 10px 3px;
+}
+
+#buttons{
+   display: grid;
+   gap: 12px;
+   margin:  20px 0;
+   grid-template-columns: repeat(2, auto);
+}
+
+.button{
+   background-color: lightskyblue;
+   border: 2px solid var(--borderColor);
+   border-radius: 50px;
+}
+
+.button:hover{
+   background-color: aqua;
+}
+
+.button.correct{
+   background-color: var(--right);
+   color: var(--altColor);
+}
+
+.button.wrong{
+   background-color: var(--wrong);
+   color: var(--altColor);
+}
