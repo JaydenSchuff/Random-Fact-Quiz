@@ -1,19 +1,19 @@
-const startBtn = document.getElementById('start')
-const nextBtn = document.getElementById('next')
-const questionContainer = document.getElementById('questionContainer')
-const questionElement = document.getElementById('question')
-const answerBtn = document.getElementById('buttons')
+var startbutton = document.getElementById('start')
+var nextbutton = document.getElementById('next')
+var questionContainer = document.getElementById('questionContainer')
+var questionElement = document.getElementById('question')
+var answerbutton = document.getElementById('buttons')
 
 let randomizer, questionList
 
-startBtn.addEventListener('click', startGame)
-nextBtn.addEventListener('click', () => {
+startbutton.addEventListener('click', startGame)
+nextbutton.addEventListener('click', () => {
   questionList++
   nextQuestion()
 })
 
 function startGame() {
-  startBtn.classList.add('hide')
+  startbutton.classList.add('hide')
   randomizer = questions.sort(() => Math.random() - .5)
   questionList = 0
   questionContainer.classList.remove('hide')
@@ -26,39 +26,40 @@ function nextQuestion() {
 }
 
 function showQuestion(question) {
-  questionElement.innerText = question.question
+  questionElement.textContent = question.question
   question.answers.forEach(answer => {
-    const button = document.createElement('button')
-    button.innerText = answer.text
-    button.classList.add('btn')
+    var button = document.createElement('button')
+    button.textContent = answer.text
+    button.classList.add('button')
     if (answer.correct) {
       button.dataset.correct = answer.correct
     }
     button.addEventListener('click', selectAnswer)
-    answerBtn.appendChild(button)
+    answerbutton.appendChild(button)
   })
 }
 
 function resetState() {
   clearStatusClass(document.body)
-  nextBtn.classList.add('hide')
-  while (answerBtn.firstChild) {
-    answerBtn.removeChild(answerBtn.firstChild)
+  nextbutton.classList.add('hide')
+  while (answerbutton.firstChild) {
+    answerbutton.removeChild(answerbutton.firstChild)
   }
 }
 
 function selectAnswer(e) {
-  const selectedButton = e.target
-  const correct = selectedButton.dataset.correct
+  var selectedButton = e.target
+  var correct = selectedButton.dataset.correct
   setStatusClass(document.body, correct)
-  Array.from(answerBtn.children).forEach(button => {
+  Array.from(answerbutton.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
   })
   if (randomizer.length > questionList + 1) {
-    nextBtn.classList.remove('hide')
-  } else {
-    startBtn.innerText = 'Restart'
-    startBtn.classList.remove('hide')
+    nextbutton.classList.remove('hide')
+  } 
+  else {
+    startbutton.textContent = 'Restart'
+    startbutton.classList.remove('hide')
   }
 }
 
@@ -66,7 +67,8 @@ function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
     element.classList.add('correct')
-  } else {
+  } 
+  else {
     element.classList.add('wrong')
   }
 }
@@ -76,7 +78,7 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 
-const questions = [
+var questions = [
   {
     question: 'What is 2 + 2?',
     answers: [

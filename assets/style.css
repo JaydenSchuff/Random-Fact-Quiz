@@ -11,17 +11,14 @@
    --right: rgb(19, 143, 19);
    --altColor:white;
 }
+
 body{
    background-color: var(--bgColor);
-   display: flex;
    justify-content: center;
-   align-items: center; 
-   width: 60vw;
-   height: 70vh;
-}
-
-.heading{
-   display: inline;
+   align-items: center;
+   display: flex;
+   width: 90vw;
+   height: 90vh;
 }
 
 h1{
@@ -49,6 +46,19 @@ h1{
    padding: 10px;
    box-shadow: 0 0 10px 3px;
    width: 1500px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+header{
+   background-color: var(--borderBg);
+   border: 3px solid var(--borderColor);
+   padding: 10px;
+   margin: 10px;
+   font-size: 20px;
+   box-shadow: 0 0 10px 3px;
 }
 
 #buttons{
@@ -56,11 +66,14 @@ h1{
    gap: 12px;
    margin:  20px 0;
    grid-template-columns: repeat(2, auto);
+   padding: 40px;
+   width: 700px;
+   height: 100px;
 }
 
 .button{
    background-color: lightskyblue;
-   border: 2px solid var(--borderColor);
+   border: 4px solid var(--borderColor);
    border-radius: 50px;
    padding: 10px;
    font-size: 30px;
@@ -104,4 +117,18 @@ h1{
  display: none;
 }
 
+#question{
+   font-size: 30px;
+   font-weight: bold;
+   background-color: var(--bgColor);
+   border: solid 2px var(--borderColor);
+   box-shadow: 0 0 10px 3px;
+}
+
+.score{
+   border: solid 2px var(--borderColor);
+   box-shadow: 0 0 10px 1px;
+   font-size: 30px;
+   background-color: var(--bgColor);
+}
  
