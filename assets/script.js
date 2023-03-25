@@ -78,37 +78,97 @@ function clearStatusClass(element) {
   element.classList.remove('wrong')
 }
 
+function score() {
+    if(answer = correct) {
+        
+    }
+}
+
 var questions = [
   {
-    question: 'What is 2 + 2?',
+    question: 'Which is the only edible food that never goes bad?',
     answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
+      { text: 'Mushrooms', correct: false },
+      { text: 'Canned Foods', correct: false },
+      { text: 'Honey', correct: true },
+      { text: 'Twinkies', correct: false }
     ]
   },
   {
-    question: 'Who is the best YouTuber?',
+    question: 'What is the most consumed manufactured drink in the world?',
     answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
+      { text: 'Tea', correct: true },
+      { text: 'Soft Drinks', correct: false },
+      { text: 'Coffee', correct: false },
+      { text: 'Alcohol', correct: false }
     ]
   },
   {
-    question: 'Is web development fun?',
+    question: 'The unicorn is the national animal of which country?',
     answers: [
-      { text: 'Kinda', correct: false },
-      { text: 'YES!!!', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
+      { text: 'Switzerland', correct: false },
+      { text: 'Ireland', correct: false },
+      { text: 'England', correct: false },
+      { text: 'Scotland', correct: true }
     ]
   },
   {
-    question: 'What is 4 * 2?',
+    question: 'A group of ravens is known as?',
     answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
+      { text: 'a Murder', correct: false },
+      { text: 'a Unkindness', correct: true },
+      { text: 'a Flock', correct: false },
+      { text: 'a Tune', correct: false }
     ]
-  }
+  },
+  {
+    question: 'Which of Newton’s Laws states that ‘for every action, there is an equal and opposite reaction?',
+    answers: [
+      { text: 'The third law of motion', correct: true },
+      { text: 'The first law of motion', correct: false },
+      { text: 'The second law of motion', correct: false }
+    ]
+  },
+  {
+    question: 'What color is your blood when it’s inside your body?',
+    answers: [
+      { text: 'Blue', correct: false },
+      { text: 'Red', correct: true }
+    ]
+  },
+  {
+    question: 'Who invented the word "vomit"?',
+    answers: [
+      { text: 'Socrates', correct: false },
+      { text: 'William Shakespear', correct: true },
+      { text: 'Chortle, Lewis Carroll', correct: false }
+    ]
+  },
+  {
+    question: 'What is the symbol for potassium?',
+    answers: [
+      { text: 'Pt', correct: false },
+      { text: 'Ta', correct: false },
+      { text: 'K', correct: true },
+      { text: 'P', correct: false }
+    ]
+  },
+  {
+    question: 'What is meteorology the study of?',
+    answers: [
+      { text: 'Weather', correct: true },
+      { text: 'Meteors', correct: false },
+      { text: 'Wave Motions', correct: false },
+      { text: 'Minerals', correct: false }
+    ]
+  },
+  {
+    question: 'How many times does the heartbeat per day?',
+    answers: [
+      { text: 'About 200,000', correct: false },
+      { text: 'About 50,000', correct: false },
+      { text: 'About 100,000', correct: true },
+      { text: 'About 350,000', correct: false }
+    ]
+  },
 ]
