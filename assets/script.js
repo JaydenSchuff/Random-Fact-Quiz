@@ -3,8 +3,11 @@ var nextbutton = document.getElementById('next')
 var questionContainer = document.getElementById('questionContainer')
 var questionElement = document.getElementById('question')
 var answerbutton = document.getElementById('buttons')
+var scoreNum = document.getElementById("score")
 
 let randomizer, questionList
+
+scoreNum = "0";
 
 startbutton.addEventListener('click', startGame)
 nextbutton.addEventListener('click', () => {
@@ -41,7 +44,7 @@ function showQuestion(question) {
 
 function resetState() {
   clearStatusClass(document.body)
-  nextbutton.classList.add('hide')
+  nextbutton. ('hide')
   while (answerbutton.firstChild) {
     answerbutton.removeChild(answerbutton.firstChild)
   }
@@ -80,9 +83,11 @@ function clearStatusClass(element) {
 
 function score() {
     if(answer = correct) {
-        
+        scoreNum = "10"
     }
 }
+
+document.querySelector("#score").append = scoreNum;
 
 var questions = [
   {
