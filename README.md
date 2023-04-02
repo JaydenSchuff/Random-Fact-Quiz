@@ -6,6 +6,10 @@ Also it happens to be an assignment.
 ## Usage
 https://jaydenschuff.github.io/Random-Fact-Quiz/
 
+## Preview
+
+<img src="Random-Fact-Quiz/assets/images/RandomFact.png" >
+
 ## Sources
 
 https://www.youtube.com/watch?v=riDzcEQbX6k
