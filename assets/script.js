@@ -17,14 +17,17 @@ function startGame() {
   questionList = 0
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
+  count = 100
+  setInterval
 }
 
-var count = 360, timer = setInterval(function() {
+var count = 100, timer = setInterval(function() {
     $("#timer").html(count--);
     if(count == 1){
       clearInterval(timer);
       startButton.innerText = 'Restart'
       startButton.classList.remove('hide')
+      questionContainerElement.classList.add('hide')
     }
 }, 1000);
 
