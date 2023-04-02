@@ -125,7 +125,7 @@ header{
    box-shadow: 0 0 10px 3px;
 }
 
-#score{
+#timer{
    border: solid 2px var(--borderColor);
    box-shadow: 0 0 10px 1px;
    font-size: 30px;
